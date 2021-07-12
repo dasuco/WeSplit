@@ -71,6 +71,7 @@ struct ContentView: View {
                 
                 Section(header: Text("Total Amount + Tip")) {
                     Text("$ \(totalAmount, specifier: "%.2f")")
+                        .foregroundColor(tipPercentages[tipPercentage] == tipPercentages.last ? .red : .black)
                 }
             }
             .navigationBarTitle("WeSplit")
